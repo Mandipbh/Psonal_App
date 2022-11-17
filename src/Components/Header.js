@@ -7,17 +7,9 @@ import {widthPercentageToDP} from 'react-native-responsive-screen';
 
 const Header = props => {
   const navigation = useNavigation();
-  const {headerName, onLeftIconPress, onRightIconPress} = props;
+  const {headerName, onLeftIconPress, onRightIconPress, hideMenu} = props;
   return (
-    <View
-      style={{
-        backgroundColor: theme.colors.primary,
-        paddingVertical: widthPercentageToDP(3),
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: widthPercentageToDP(3),
-      }}>
+    <View style={styles.headerView}>
       <View
         style={{
           flexDirection: 'row',
@@ -39,13 +31,15 @@ const Header = props => {
           {headerName}
         </Text>
       </View>
-      <TouchableOpacity onPress={onRightIconPress}>
-        <Icon
-          name="menu"
-          size={widthPercentageToDP(6)}
-          color={theme.colors.white}
-        />
-      </TouchableOpacity>
+      {!hideMenu && (
+        <TouchableOpacity onPress={onRightIconPress}>
+          <Icon
+            name="menu"
+            size={widthPercentageToDP(6)}
+            color={theme.colors.white}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
@@ -53,11 +47,19 @@ const Header = props => {
 export default Header;
 
 const styles = StyleSheet.create({
+  headerView: {
+    backgroundColor: theme.colors.primary,
+    paddingVertical: widthPercentageToDP(3),
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: widthPercentageToDP(3),
+  },
   btnView: {
     padding: widthPercentageToDP(0.15),
-    borderRadius: widthPercentageToDP(1),
+    borderRadius: widthPercentageToDP(1.3),
     borderColor: theme.colors.white,
-    borderWidth: 0.5,
+    borderWidth: 0.8,
     marginHorizontal: 4,
   },
 });

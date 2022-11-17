@@ -20,6 +20,7 @@ import MessagesScreen from '../Screens/MessagesScreen';
 import CourseScreen from '../Screens/CourseScreen';
 import CommanScreen from '../Screens/CommanScreen';
 import HealthInsuranceScreen from '../Screens/HealthInsuranceScreen';
+import LoginForm from '../Screens/LoginForm';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -119,6 +120,7 @@ function AppNavigator() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Tabs" component={BottomTab} />
+        <Stack.Screen name="LoginForm" component={LoginForm} />
         {/* <Stack.Screen name="Portals" component={PortalsScreen} /> */}
         {/* <Stack.Screen name="News" component={NewsScreen} /> */}
         {/* <Stack.Screen name="Messgaes" component={MessagesScreen} />
