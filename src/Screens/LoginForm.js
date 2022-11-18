@@ -36,67 +36,64 @@ const LoginForm = ({navigation}) => {
         }}
         hideMenu
       />
-      <KeyboardAwareScrollView
-        style={{flex: 1}}
-        showsVerticalScrollIndicator={false}>
-        <View>
-          <InputBox label="Email" placeholder="JohnDoe@example.com" />
-        </View>
-        <View>
-          <InputBox
-            label="Password"
-            placeholder="*********"
-            secureTextEntry={true}
-          />
-        </View>
 
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Signup')}
-          style={styles.linearGradientView}>
-          <LinearGradient
+      <View>
+        <InputBox label="Email" placeholder="JohnDoe@example.com" />
+      </View>
+      <View>
+        <InputBox
+          label="Password"
+          placeholder="*********"
+          secureTextEntry={true}
+        />
+      </View>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Tabs')}
+        style={styles.linearGradientView}>
+        <LinearGradient
+          style={{
+            borderRadius: wp('10%'),
+            padding: wp(1),
+            paddingVertical: wp(2.5),
+            alignItems: 'center',
+          }}
+          start={{x: 0, y: 1}}
+          end={{x: 1, y: 0}}
+          colors={[theme.colors.blue, theme.colors.lightRed]}>
+          <View
             style={{
-              borderRadius: wp('10%'),
-              padding: wp(1),
-              paddingVertical: wp(2.5),
+              flexDirection: 'row',
+              justifyContent: 'center',
               alignItems: 'center',
-            }}
-            start={{x: 0, y: 1}}
-            end={{x: 1, y: 0}}
-            colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View
+            }}>
+            <Text
               style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
+                fontSize: wp(4.5),
+                color: theme.colors.white,
+                textAlign: 'center',
               }}>
-              <Text
-                style={{
-                  fontSize: wp(4.5),
-                  color: theme.colors.white,
-                  textAlign: 'center',
-                }}>
-                {'Login '}
-              </Text>
-              <Icon
-                name="arrowright"
-                color={theme.colors.white}
-                size={wp(4)}
-                style={{top: 1}}
-              />
-            </View>
-          </LinearGradient>
-        </TouchableOpacity>
-        <View style={styles.bttomView}>
-          <Image
-            style={styles.bottomImgone}
-            source={require('../assets/Bottom2.png')}
-          />
-          <Image
-            style={styles.bottomImgtwo}
-            source={require('../assets/Bottom1.png')}
-          />
-        </View>
-      </KeyboardAwareScrollView>
+              {'Login '}
+            </Text>
+            <Icon
+              name="arrowright"
+              color={theme.colors.white}
+              size={wp(4)}
+              style={{top: 1}}
+            />
+          </View>
+        </LinearGradient>
+      </TouchableOpacity>
+      <View style={styles.bttomView}>
+        <Image
+          style={styles.bottomImgone}
+          source={require('../assets/Bottom2.png')}
+        />
+        <Image
+          style={styles.bottomImgtwo}
+          source={require('../assets/Bottom1.png')}
+        />
+      </View>
     </View>
   );
 };

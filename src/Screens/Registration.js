@@ -56,79 +56,76 @@ const Registration = ({navigation}) => {
         }}
         hideMenu
       />
-      <KeyboardAwareScrollView
-        style={{flex: 1}}
-        showsVerticalScrollIndicator={false}>
-        <View>
-          <SecondTextInput label="Contact information">
-            <CommenInput placeholder="Email" style={{marginTop: hp(1)}} />
-            <CommenInput placeholder="Password" secureTextEntry={true} />
-            <View style={styles.divider} />
-            <CommenInput
-              placeholder="First name"
-              secureTextEntry={true}
-              style={{marginTop: hp(1)}}
-            />
-            <CommenInput placeholder="Last name" secureTextEntry={true} />
-            <View style={styles.divider} />
-            <CommenInput
-              placeholder="City"
-              secureTextEntry={true}
-              style={{marginTop: hp(1)}}
-            />
-            <CommenInput placeholder="StreetName" secureTextEntry={true} />
-            <CommenInput placeholder="Zipcode" secureTextEntry={true} />
-            <View style={styles.divider} />
-          </SecondTextInput>
-        </View>
 
-        <TouchableOpacity
-          onPress={() => navigation.navigate('SecondRegForm')}
-          style={styles.linearGradientView}>
-          <LinearGradient
+      <View>
+        <SecondTextInput label="Contact information">
+          <CommenInput placeholder="Email" style={{marginTop: hp(1)}} />
+          <CommenInput placeholder="Password" secureTextEntry={true} />
+          <View style={styles.divider} />
+          <CommenInput
+            placeholder="First name"
+            secureTextEntry={true}
+            style={{marginTop: hp(1)}}
+          />
+          <CommenInput placeholder="Last name" secureTextEntry={true} />
+          <View style={styles.divider} />
+          <CommenInput
+            placeholder="City"
+            secureTextEntry={true}
+            style={{marginTop: hp(1)}}
+          />
+          <CommenInput placeholder="StreetName" secureTextEntry={true} />
+          <CommenInput placeholder="Zipcode" secureTextEntry={true} />
+          <View style={styles.divider} />
+        </SecondTextInput>
+      </View>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SecondRegForm')}
+        style={styles.linearGradientView}>
+        <LinearGradient
+          style={{
+            borderRadius: wp('10%'),
+            padding: wp(1),
+            paddingVertical: wp(2.5),
+            alignItems: 'center',
+          }}
+          start={{x: 0, y: 1}}
+          end={{x: 1, y: 0}}
+          colors={[theme.colors.blue, theme.colors.lightRed]}>
+          <View
             style={{
-              borderRadius: wp('10%'),
-              padding: wp(1),
-              paddingVertical: wp(2.5),
+              flexDirection: 'row',
+              justifyContent: 'center',
               alignItems: 'center',
-            }}
-            start={{x: 0, y: 1}}
-            end={{x: 1, y: 0}}
-            colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View
+            }}>
+            <Text
               style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
+                fontSize: wp(4.5),
+                color: theme.colors.white,
+                textAlign: 'center',
               }}>
-              <Text
-                style={{
-                  fontSize: wp(4.5),
-                  color: theme.colors.white,
-                  textAlign: 'center',
-                }}>
-                {'Continue '}
-              </Text>
-              <Icon
-                name="arrowright"
-                color={theme.colors.white}
-                size={wp(4)}
-                style={{top: 1}}
-              />
-            </View>
-          </LinearGradient>
-        </TouchableOpacity>
-        <View style={styles.bttomView}>
-          <Image
-            style={styles.bottomImgone}
-            source={require('../assets/Bottom2.png')}
-          />
-          <Image
-            style={styles.bottomImgtwo}
-            source={require('../assets/Bottom1.png')}
-          />
-        </View>
-      </KeyboardAwareScrollView>
+              {'Continue '}
+            </Text>
+            <Icon
+              name="arrowright"
+              color={theme.colors.white}
+              size={wp(4)}
+              style={{top: 1}}
+            />
+          </View>
+        </LinearGradient>
+      </TouchableOpacity>
+      <View style={styles.bttomView}>
+        <Image
+          style={styles.bottomImgone}
+          source={require('../assets/Bottom2.png')}
+        />
+        <Image
+          style={styles.bottomImgtwo}
+          source={require('../assets/Bottom1.png')}
+        />
+      </View>
     </View>
   );
 };

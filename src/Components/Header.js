@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
@@ -54,6 +54,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: widthPercentageToDP(3),
+    paddingTop:
+      Platform.OS === 'ios' ? widthPercentageToDP(10) : widthPercentageToDP(8),
   },
   btnView: {
     padding: widthPercentageToDP(0.15),

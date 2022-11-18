@@ -19,7 +19,6 @@ import {
 import {theme} from '../Utils';
 import Header from '../Components/Header';
 import InputBox, {SecondTextInput} from '../Components/InputBox';
-import {TextInput} from 'react-native-gesture-handler';
 
 const Prefrences = [
   {id: 0, name: 'Health insurance'},
@@ -33,17 +32,28 @@ const h = Dimensions.get('window').height;
 const w = Dimensions.get('window').width;
 
 const SecondRegForm = ({navigation}) => {
-  const [selectedItem, setSelectedItem] = useState();
-  const renderItem = ({item}) => {
-    // console.log(item);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const renderItem = ({item, index}) => {
     return (
       <>
-        <TouchableOpacity style={{padding: 10}} onPress={() => {}}>
+        <TouchableOpacity
+          style={{
+            marginVertical: hp(0.5),
+            justifyContent: 'center',
+            backgroundColor:
+              selectedItem === index
+                ? theme.colors.primary1
+                : theme.colors.white,
+          }}
+          onPress={() => {
+            setSelectedItem(index);
+          }}>
           <Text
             style={{
               fontSize: 18,
               color: theme.colors.blue1,
-              paddingHorizontal: wp(10),
+              paddingHorizontal: wp(8),
+              top: wp(2),
             }}>
             {item.name}
           </Text>
@@ -62,62 +72,61 @@ const SecondRegForm = ({navigation}) => {
         }}
         hideMenu
       />
-      <KeyboardAwareScrollView
-        style={{flex: 1}}
-        showsVerticalScrollIndicator={false}>
-        <SecondTextInput label="Preferences">
-          <FlatList
-            data={Prefrences}
-            renderItem={renderItem}
-            style={{marginTop: hp(1)}}
-          />
-        </SecondTextInput>
 
-        <TouchableOpacity onPress={() => {}} style={styles.linearGradientView}>
-          <LinearGradient
+      <SecondTextInput label="Preferences">
+        <FlatList
+          data={Prefrences}
+          renderItem={renderItem}
+          style={{marginTop: hp(1)}}
+        />
+      </SecondTextInput>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Login')}
+        style={styles.linearGradientView}>
+        <LinearGradient
+          style={{
+            borderRadius: wp('10%'),
+            padding: wp(1),
+            paddingVertical: wp(2.5),
+            alignItems: 'center',
+          }}
+          start={{x: 0, y: 1}}
+          end={{x: 1, y: 0}}
+          colors={[theme.colors.blue, theme.colors.lightRed]}>
+          <View
             style={{
-              borderRadius: wp('10%'),
-              padding: wp(1),
-              paddingVertical: wp(2.5),
+              flexDirection: 'row',
+              justifyContent: 'center',
               alignItems: 'center',
-            }}
-            start={{x: 0, y: 1}}
-            end={{x: 1, y: 0}}
-            colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View
+            }}>
+            <Text
               style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
+                fontSize: wp(4.5),
+                color: theme.colors.white,
+                textAlign: 'center',
               }}>
-              <Text
-                style={{
-                  fontSize: wp(4.5),
-                  color: theme.colors.white,
-                  textAlign: 'center',
-                }}>
-                {'Register '}
-              </Text>
-              <Icon
-                name="arrowright"
-                color={theme.colors.white}
-                size={wp(4)}
-                style={{top: 1}}
-              />
-            </View>
-          </LinearGradient>
-        </TouchableOpacity>
-        <View style={styles.bttomView}>
-          <Image
-            style={styles.bottomImgone}
-            source={require('../assets/Bottom2.png')}
-          />
-          <Image
-            style={styles.bottomImgtwo}
-            source={require('../assets/Bottom1.png')}
-          />
-        </View>
-      </KeyboardAwareScrollView>
+              {'Register '}
+            </Text>
+            <Icon
+              name="arrowright"
+              color={theme.colors.white}
+              size={wp(4)}
+              style={{top: 1}}
+            />
+          </View>
+        </LinearGradient>
+      </TouchableOpacity>
+      <View style={styles.bttomView}>
+        <Image
+          style={styles.bottomImgone}
+          source={require('../assets/Bottom2.png')}
+        />
+        <Image
+          style={styles.bottomImgtwo}
+          source={require('../assets/Bottom1.png')}
+        />
+      </View>
     </View>
   );
 };

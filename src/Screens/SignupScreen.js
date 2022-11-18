@@ -22,19 +22,6 @@ import Header from '../Components/Header';
 const SignupScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      {/* <View style={styles.headderView}>
-        <Icon
-          name="arrowleft"
-          color={theme.colors.white}
-          size={wp(5)}
-          onPress={() => {
-            navigation.goBack();
-          }}
-        />
-        <Text style={{color: theme.colors.white, fontSize: wp(4.5)}}>
-          Login
-        </Text>
-      </View> */}
       <Header
         headerName={'Login'}
         hideMenu

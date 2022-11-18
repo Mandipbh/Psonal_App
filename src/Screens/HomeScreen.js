@@ -32,6 +32,7 @@ const HomeScreen = ({navigation}) => {
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingHorizontal: wp(3.5),
+          paddingTop: Platform.OS === 'ios' ? wp(10) : wp(8),
         }}>
         <View>
           <Text
