@@ -117,9 +117,9 @@ function AppNavigator() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
+        {/* <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
-        <Stack.Screen name="Tabs" component={BottomTab} />
+        <Stack.Screen name="Tabs" component={BottomTab} /> */}
         <Stack.Screen name="LoginForm" component={LoginForm} />
         {/* <Stack.Screen name="Portals" component={PortalsScreen} /> */}
         {/* <Stack.Screen name="News" component={NewsScreen} /> */}

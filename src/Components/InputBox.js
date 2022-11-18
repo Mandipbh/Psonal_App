@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
@@ -16,10 +16,15 @@ const InputBox = props => {
         style={styles.linearView}
         end={{x: 1, y: 1}}
         colors={[theme.colors.blue, theme.colors.lightRed]}>
-        <View style={{justifyContent: 'center', left: wp(3)}}>
-          <Text style={styles.textlist}>{'Email'}</Text>
+        <View style={{justifyContent: 'center'}}>
+          <Text style={styles.textlist}>{label}</Text>
         </View>
       </LinearGradient>
+      <TextInput
+        style={styles.input}
+        placeholder={placeholder}
+        placeholderTextColor={theme.colors.black}
+      />
     </View>
   );
 };
@@ -39,5 +44,15 @@ const styles = StyleSheet.create({
     // borderTopLeftRadius: 40,
     // borderBottomLeftRadius: 40,
     justifyContent: 'center',
+  },
+  textlist: {
+    fontSize: wp(5),
+    color: theme.colors.white,
+  },
+  input: {
+    backgroundColor: theme.colors.gray1,
+    fontSize: wp(5.2),
+    paddingVertical: hp(2.3),
+    paddingHorizontal: wp(3),
   },
 });
