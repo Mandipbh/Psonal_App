@@ -1,5 +1,5 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
-import React from 'react';
+import React, {Children} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import {
@@ -9,7 +9,8 @@ import {
 import {theme} from '../Utils';
 
 const InputBox = props => {
-  const {label, placeholder} = props;
+  const {label, placeholder, secureTextEntry, children} = props;
+
   return (
     <View style={styles.inputView}>
       <LinearGradient
@@ -24,7 +25,36 @@ const InputBox = props => {
         style={styles.input}
         placeholder={placeholder}
         placeholderTextColor={theme.colors.black}
+        secureTextEntry={secureTextEntry}
       />
+      <View>{children}</View>
+    </View>
+  );
+};
+
+export const SecondTextInput = props => {
+  const {label, children} = props;
+  return (
+    <View style={[styles.inputView]}>
+      <LinearGradient
+        style={styles.linearView}
+        end={{x: 1, y: 1}}
+        colors={[theme.colors.blue, theme.colors.lightRed]}>
+        <View style={{justifyContent: 'center'}}>
+          <Text style={styles.textlist}>{label}</Text>
+        </View>
+      </LinearGradient>
+
+      <View
+        style={{
+          padding: 5,
+
+          backgroundColor: theme.colors.white,
+          height: hp('55%'),
+          borderRadius: 18,
+        }}>
+        {children}
+      </View>
     </View>
   );
 };

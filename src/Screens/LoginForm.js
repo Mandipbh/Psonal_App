@@ -36,12 +36,18 @@ const LoginForm = ({navigation}) => {
         }}
         hideMenu
       />
-      <KeyboardAwareScrollView style={{flex: 1}}>
+      <KeyboardAwareScrollView
+        style={{flex: 1}}
+        showsVerticalScrollIndicator={false}>
         <View>
           <InputBox label="Email" placeholder="JohnDoe@example.com" />
         </View>
         <View>
-          <InputBox label="Password" placeholder="*********" />
+          <InputBox
+            label="Password"
+            placeholder="*********"
+            secureTextEntry={true}
+          />
         </View>
 
         <TouchableOpacity
@@ -57,7 +63,12 @@ const LoginForm = ({navigation}) => {
             start={{x: 0, y: 1}}
             end={{x: 1, y: 0}}
             colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View style={{flexDirection: 'row'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Text
                 style={{
                   fontSize: wp(4.5),
@@ -69,8 +80,8 @@ const LoginForm = ({navigation}) => {
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
-                size={wp(5)}
-                style={{top: 4}}
+                size={wp(4)}
+                style={{top: 1}}
               />
             </View>
           </LinearGradient>
@@ -123,5 +134,6 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     alignSelf: 'center',
     zIndex: 111,
+    top: hp(35),
   },
 });

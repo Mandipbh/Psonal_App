@@ -89,7 +89,7 @@ const SignupScreen = ({navigation}) => {
       </View>
       <View style={styles.bottomContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Tabs')}
+          onPress={() => navigation.navigate('Registration')}
           style={styles.register}>
           <LinearGradient
             style={styles.btn}
