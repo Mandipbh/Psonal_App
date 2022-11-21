@@ -34,16 +34,14 @@ const SignupScreen = ({navigation}) => {
         portals and business
       </Text>
       <View style={{marginTop: hp(10)}}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('LoginForm')}
-          style={styles.linearGradientView}>
+        <TouchableOpacity onPress={() => {}} style={styles.linearGradientView}>
           <LinearGradient
             style={styles.btn}
             start={{x: 0, y: 1}}
             end={{x: 1, y: 0}}
             colors={[theme.colors.blue, theme.colors.lightRed]}>
             <View style={{flexDirection: 'row'}}>
-              <Text style={styles.btnTxt}>{'Login in with your Digi '}</Text>
+              <Text style={styles.btnTxt}>{'Login in with your Digit '}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
