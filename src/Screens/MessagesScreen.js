@@ -11,7 +11,7 @@ const MessagesScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <Header
-        headerName="Messages"
+        headerName="Berichten"
         onLeftIconPress={() => {
           navigation.goBack();
         }}

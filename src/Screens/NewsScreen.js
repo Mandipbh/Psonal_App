@@ -11,7 +11,7 @@ const NewsScreen = ({navigation}) => {
         index={index}
         onPress={() => {
           index === 2
-            ? navigation.navigate('Comman', {title: 'NS strike', data: NSData})
+            ? navigation.navigate('Comman', {title: 'NS Staking', data: NSData})
             : null;
         }}
       />
@@ -20,7 +20,7 @@ const NewsScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <Header
-        headerName="News"
+        headerName="Nieuws"
         onLeftIconPress={() => {
           navigation.goBack();
         }}

@@ -7,7 +7,7 @@ const CustomMessages = props => {
   const {massageName} = props;
   return (
     <View style={{flex: 1}}>
-      <Header headerName="Messages" />
+      <Header headerName="Berichten" />
       <View style={{backgroundColor: '#eeeeed', margin: 15, borderRadius: 20}}>
         <LinearGradient
           style={{

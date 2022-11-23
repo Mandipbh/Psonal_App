@@ -1,17 +1,17 @@
 const HomeOptions = [
   {
     id: 1,
-    name: 'Courses',
+    name: 'Cursussen',
     nav: 'Comman',
   },
   {
     id: 2,
-    name: 'Portals',
+    name: 'Portalen',
     nav: 'Portals',
   },
   {
     id: 3,
-    name: 'News',
+    name: 'Nieuws',
     nav: 'News',
   },
 ];
@@ -19,19 +19,19 @@ const HomeOptions = [
 const PortalsData = [
   {
     id: 1,
-    name: 'Health insurance',
+    name: 'Zorgverzeking',
   },
   {
     id: 2,
-    name: 'Tax',
+    name: 'MijnBelasting',
   },
   {
     id: 3,
-    name: 'My Government',
+    name: 'MijnOverheid',
   },
   {
     id: 4,
-    name: 'Study link',
+    name: 'Studielink',
   },
   {
     id: 5,
@@ -50,22 +50,22 @@ const NewsData = [
   },
   {
     id: 2,
-    name: 'waste calender',
+    name: 'Afval Kalender',
   },
   {
     id: 3,
-    name: 'NS strike',
+    name: 'NS Staking',
   },
 ];
 
 const helthData = [
   {
     id: 1,
-    name: 'MY CZ',
+    name: 'Mijn CZ',
   },
   {
     id: 2,
-    name: 'Silver Cross',
+    name: 'Zilveren Kruis',
   },
   {
     id: 3,
@@ -80,12 +80,12 @@ const helthData = [
 const MessageData = [
   {
     id: 1,
-    title: 'Message 1',
+    title: 'Bericht 1',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   {
     id: 2,
-    title: 'Message 2',
+    title: 'Bericht 2',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
 ];
@@ -93,12 +93,12 @@ const MessageData = [
 const CourseData = [
   {
     id: 1,
-    title: 'Ceramics course',
+    title: 'Keramiek cursus',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
   {
     id: 2,
-    title: 'Drama course',
+    title: 'Toneel cursus',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
 ];
@@ -106,7 +106,7 @@ const CourseData = [
 const NSData = [
   {
     id: 1,
-    title: 'NS announces strike',
+    title: 'NS kondigt staking aan',
     desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   },
 ];

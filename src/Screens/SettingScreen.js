@@ -13,22 +13,22 @@ const SettingScreen = ({navigation}) => {
     },
     {
       id: '2',
-      name: 'Notifications',
+      name: 'Notificaties',
       iconName: 'bell',
     },
     {
       id: '3',
-      name: 'Security',
+      name: 'Beveiliging',
       iconName: 'shield',
     },
     {
       id: '4',
-      name: 'Support',
+      name: 'Ondersteuning',
       iconName: 'question-circle',
     },
     {
       id: '5',
-      name: 'About us',
+      name: 'Over ons',
       iconName: 'info-circle',
     },
   ];

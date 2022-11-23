@@ -11,7 +11,7 @@ const HealthInsuranceScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <Header
-        headerName="Health insurance"
+        headerName="Zorgverzeking"
         onLeftIconPress={() => {
           navigation.goBack();
         }}

@@ -15,7 +15,7 @@ const HomeScreen = ({navigation}) => {
       <CustomCard
         item={item}
         onPress={() => {
-          navigation.navigate(item.nav, {title: 'Courses', data: CourseData});
+          navigation.navigate(item.nav, {title: 'Cursussen', data: CourseData});
         }}
         index={index}
       />
@@ -41,9 +41,9 @@ const HomeScreen = ({navigation}) => {
             }}>
             Welkom John
           </Text>
-          <Text style={{fontSize: wp(3), color: theme.colors.white}}>
+          {/* <Text style={{fontSize: wp(3), color: theme.colors.white}}>
             Check out here what you missed
-          </Text>
+          </Text> */}
         </View>
         <TouchableOpacity>
           <Icon
@@ -52,7 +52,7 @@ const HomeScreen = ({navigation}) => {
             color={theme.colors.white}
             onPress={() => {
               navigation.navigate('Comman', {
-                title: 'Messages',
+                title: 'Berichten',
                 data: MessageData,
               });
             }}

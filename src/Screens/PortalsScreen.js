@@ -18,7 +18,7 @@ const PortalsScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <Header
-        headerName="Portals"
+        headerName="Portalen"
         onLeftIconPress={() => {
           navigation.goBack();
         }}
