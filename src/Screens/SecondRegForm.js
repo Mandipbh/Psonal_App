@@ -19,13 +19,12 @@ import {
 import {theme} from '../Utils';
 import Header from '../Components/Header';
 import InputBox, {SecondTextInput} from '../Components/InputBox';
+import {CommenInput} from './Registration';
 
 const Prefrences = [
   {id: 0, name: 'Health insurance'},
   {id: 1, name: 'School'},
   {id: 2, name: 'Occupation'},
-  {id: 3, name: 'Example 1'},
-  {id: 4, name: 'Example 2'},
 ];
 
 const h = Dimensions.get('window').height;
@@ -73,60 +72,69 @@ const SecondRegForm = ({navigation}) => {
         hideMenu
       />
 
-      <SecondTextInput label="Preferences">
-        <FlatList
+      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+        <SecondTextInput label="Preferences">
+          {/* <FlatList
           data={Prefrences}
           renderItem={renderItem}
           style={{marginTop: hp(1)}}
-        />
-      </SecondTextInput>
+        /> */}
+          <CommenInput placeholder="Health insurance" />
+          <CommenInput placeholder="School" secureTextEntry={true} />
+          <CommenInput placeholder="Ocupation" secureTextEntry={true} />
+        </SecondTextInput>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Login')}
-        style={styles.linearGradientView}>
-        <LinearGradient
-          style={{
-            borderRadius: wp('10%'),
-            padding: wp(1),
-            paddingVertical: wp(2.5),
-            alignItems: 'center',
-          }}
-          start={{x: 0, y: 1}}
-          end={{x: 1, y: 0}}
-          colors={[theme.colors.blue, theme.colors.lightRed]}>
-          <View
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Login')}
+          style={styles.linearGradientView}>
+          <LinearGradient
             style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
+              borderRadius: wp('10%'),
+              padding: wp(1),
+              paddingVertical: wp(2.5),
               alignItems: 'center',
-            }}>
-            <Text
+            }}
+            start={{x: 0, y: 1}}
+            end={{x: 1, y: 0}}
+            colors={[theme.colors.blue, theme.colors.lightRed]}>
+            <View
               style={{
-                fontSize: wp(4.5),
-                color: theme.colors.white,
-                textAlign: 'center',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}>
-              {'Register '}
-            </Text>
-            <Icon
-              name="arrowright"
-              color={theme.colors.white}
-              size={wp(4)}
-              style={{top: 1}}
-            />
-          </View>
-        </LinearGradient>
-      </TouchableOpacity>
-      <View style={styles.bttomView}>
+              <Text
+                style={{
+                  fontSize: wp(4.5),
+                  color: theme.colors.white,
+                  textAlign: 'center',
+                }}>
+                {'Register '}
+              </Text>
+              <Icon
+                name="arrowright"
+                color={theme.colors.white}
+                size={wp(4)}
+                style={{top: 1}}
+              />
+            </View>
+          </LinearGradient>
+        </TouchableOpacity>
+        {/* <View style={styles.bttomView}>
+          <Image
+            style={styles.bottomImgone}
+            source={require('../assets/Bottom2.png')}
+          />
+          <Image
+            style={styles.bottomImgtwo}
+            source={require('../assets/Bottom1.png')}
+          />
+        </View> */}
         <Image
-          style={styles.bottomImgone}
-          source={require('../assets/Bottom2.png')}
+          source={require('../assets/CompLayer1.png')}
+          style={{marginTop: wp(-25)}}
         />
-        <Image
-          style={styles.bottomImgtwo}
-          source={require('../assets/Bottom1.png')}
-        />
-      </View>
+      </KeyboardAwareScrollView>
     </View>
   );
 };
@@ -137,6 +145,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FAFAFA',
+    borderWidth: 1,
   },
   bttomView: {
     // position: 'absolute',
@@ -165,7 +174,7 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     alignSelf: 'center',
     zIndex: 111,
-    top: hp('15%'),
+    top: hp('12%'),
   },
   divider: {borderWidth: 0.4, borderColor: 'lightgray', marginTop: hp(4)},
 });

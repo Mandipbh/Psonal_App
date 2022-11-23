@@ -24,7 +24,7 @@ import Header from '../Components/Header';
 import InputBox, {SecondTextInput} from '../Components/InputBox';
 import {TextInput} from 'react-native-gesture-handler';
 
-const CommenInput = props => {
+export const CommenInput = props => {
   const {placeholder, secureTextEntry, style} = props;
   return (
     <TextInput
@@ -34,8 +34,12 @@ const CommenInput = props => {
       style={[
         {
           fontSize: 18,
-          paddingVertical: 6,
+          paddingVertical: hp(1),
           paddingHorizontal: wp(5),
+          borderWidth: 1,
+          marginVertical: wp(2),
+          borderColor: theme.colors.primary,
+          borderRadius: 10,
         },
         style,
       ]}
@@ -48,7 +52,7 @@ const w = Dimensions.get('window').width;
 
 const Registration = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <>
       <Header
         headerName={'Registration'}
         onLeftIconPress={() => {
@@ -56,77 +60,94 @@ const Registration = ({navigation}) => {
         }}
         hideMenu
       />
-
-      <View>
-        <SecondTextInput label="Contact information">
-          <CommenInput placeholder="Email" style={{marginTop: hp(1)}} />
-          <CommenInput placeholder="Password" secureTextEntry={true} />
-          <View style={styles.divider} />
-          <CommenInput
-            placeholder="First name"
-            secureTextEntry={true}
-            style={{marginTop: hp(1)}}
-          />
-          <CommenInput placeholder="Last name" secureTextEntry={true} />
-          <View style={styles.divider} />
-          <CommenInput
-            placeholder="City"
-            secureTextEntry={true}
-            style={{marginTop: hp(1)}}
-          />
-          <CommenInput placeholder="StreetName" secureTextEntry={true} />
-          <CommenInput placeholder="Zipcode" secureTextEntry={true} />
-          <View style={styles.divider} />
-        </SecondTextInput>
-      </View>
-
-      <TouchableOpacity
-        onPress={() => navigation.navigate('SecondRegForm')}
-        style={styles.linearGradientView}>
-        <LinearGradient
-          style={{
-            borderRadius: wp('10%'),
-            padding: wp(1),
-            paddingVertical: wp(2.5),
-            alignItems: 'center',
-          }}
-          start={{x: 0, y: 1}}
-          end={{x: 1, y: 0}}
-          colors={[theme.colors.blue, theme.colors.lightRed]}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <Text
-              style={{
-                fontSize: wp(4.5),
-                color: theme.colors.white,
-                textAlign: 'center',
-              }}>
-              {'Continue '}
-            </Text>
-            <Icon
-              name="arrowright"
-              color={theme.colors.white}
-              size={wp(4)}
-              style={{top: 1}}
-            />
+      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.container}>
+          <View>
+            <SecondTextInput label="Contact information">
+              <CommenInput
+                placeholder="Email"
+                style={
+                  {
+                    // borderWidth: 1,
+                    // borderColor: theme.colors.primary,
+                    // borderRadius: 10,
+                  }
+                }
+              />
+              <CommenInput placeholder="Password" secureTextEntry={true} />
+              {/* <View style={styles.divider} /> */}
+              <CommenInput
+                placeholder="First name"
+                secureTextEntry={true}
+                // style={{marginTop: hp(1)}}
+              />
+              <CommenInput placeholder="Last name" secureTextEntry={true} />
+              {/* <View style={styles.divider} /> */}
+              <CommenInput
+                placeholder="City"
+                secureTextEntry={true}
+                // style={{marginTop: hp(1)}}
+              />
+              <CommenInput placeholder="StreetName" secureTextEntry={true} />
+              <CommenInput placeholder="Zipcode" secureTextEntry={true} />
+              {/* <View style={styles.divider} /> */}
+            </SecondTextInput>
           </View>
-        </LinearGradient>
-      </TouchableOpacity>
-      <View style={styles.bttomView}>
-        <Image
-          style={styles.bottomImgone}
-          source={require('../assets/Bottom2.png')}
-        />
-        <Image
-          style={styles.bottomImgtwo}
-          source={require('../assets/Bottom1.png')}
-        />
-      </View>
-    </View>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SecondRegForm')}
+            style={styles.linearGradientView}>
+            <LinearGradient
+              style={{
+                borderRadius: wp('10%'),
+                padding: wp(1),
+                paddingVertical: wp(2.5),
+                alignItems: 'center',
+              }}
+              start={{x: 0, y: 1}}
+              end={{x: 1, y: 0}}
+              colors={[theme.colors.blue, theme.colors.lightRed]}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={{
+                    fontSize: wp(4.5),
+                    color: theme.colors.white,
+                    textAlign: 'center',
+                  }}>
+                  {'Continue '}
+                </Text>
+                <Icon
+                  name="arrowright"
+                  color={theme.colors.white}
+                  size={wp(4)}
+                  style={{top: 1}}
+                />
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+          {/* <View style={styles.bttomView}>
+            <Image
+              style={styles.bottomImgone}
+              source={require('../assets/Bottom2.png')}
+            />
+            <Image
+              style={styles.bottomImgtwo}
+              source={require('../assets/Bottom1.png')}
+            />
+          </View> */}
+
+          <Image
+            source={require('../assets/CompLayer1.png')}
+            style={{marginTop: wp(-25)}}
+          />
+        </View>
+      </KeyboardAwareScrollView>
+    </>
   );
 };
 
@@ -139,7 +160,7 @@ const styles = StyleSheet.create({
   },
   bttomView: {
     // position: 'absolute',
-    bottom: hp('25%'),
+    bottom: hp('20%'),
   },
   bottomImgone: {
     top: -h * -0.28,
@@ -164,7 +185,7 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     alignSelf: 'center',
     zIndex: 111,
-    top: hp('15%'),
+    top: hp('10%'),
   },
   divider: {borderWidth: 0.4, borderColor: 'lightgray'},
 });
