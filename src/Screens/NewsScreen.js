@@ -1,8 +1,7 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
-import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
-import {NewsData, NSData, PortalsData} from '../Utils/MockData';
+import {CustomCard, Header} from '../Components';
+import {NewsData, NSData} from '../Utils/MockData';
 
 const NewsScreen = ({navigation}) => {
   const renderItem = ({item, index}) => {

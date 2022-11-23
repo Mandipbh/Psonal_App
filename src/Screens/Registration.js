@@ -6,22 +6,18 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Alert,
-  ScrollView,
-  Platform,
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {theme} from '../Utils';
-import Header from '../Components/Header';
-import InputBox, {SecondTextInput} from '../Components/InputBox';
+import {Header} from '../Components';
+import {SecondTextInput} from '../Components';
 import {TextInput} from 'react-native-gesture-handler';
 
 export const CommenInput = props => {
@@ -54,7 +50,7 @@ const Registration = ({navigation}) => {
   return (
     <>
       <Header
-        headerName={'Registration'}
+        headerName={'Registratie'}
         onLeftIconPress={() => {
           navigation.goBack();
         }}
@@ -63,7 +59,7 @@ const Registration = ({navigation}) => {
       <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
           <View>
-            <SecondTextInput label="Contact information">
+            <SecondTextInput label="Contact informatie">
               <CommenInput
                 placeholder="Email"
                 style={
@@ -74,22 +70,22 @@ const Registration = ({navigation}) => {
                   }
                 }
               />
-              <CommenInput placeholder="Password" secureTextEntry={true} />
+              <CommenInput placeholder="Wachtwoord" secureTextEntry={true} />
               {/* <View style={styles.divider} /> */}
               <CommenInput
-                placeholder="First name"
+                placeholder="Voornaam"
                 secureTextEntry={true}
                 // style={{marginTop: hp(1)}}
               />
-              <CommenInput placeholder="Last name" secureTextEntry={true} />
+              <CommenInput placeholder="Achternaam" />
               {/* <View style={styles.divider} /> */}
               <CommenInput
-                placeholder="City"
+                placeholder="Stad"
                 secureTextEntry={true}
                 // style={{marginTop: hp(1)}}
               />
-              <CommenInput placeholder="StreetName" secureTextEntry={true} />
-              <CommenInput placeholder="Zipcode" secureTextEntry={true} />
+              <CommenInput placeholder="Straatnaam" />
+              <CommenInput placeholder="Postcode" />
               {/* <View style={styles.divider} /> */}
             </SecondTextInput>
           </View>
@@ -119,7 +115,7 @@ const Registration = ({navigation}) => {
                     color: theme.colors.white,
                     textAlign: 'center',
                   }}>
-                  {'Continue '}
+                  {'Doorgaan '}
                 </Text>
                 <Icon
                   name="arrowright"

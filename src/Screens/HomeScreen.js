@@ -1,8 +1,7 @@
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import CustomCard from '../Components/CustomCard';
+import {CustomCard} from '../Components';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -40,7 +39,7 @@ const HomeScreen = ({navigation}) => {
               fontSize: wp(5),
               color: theme.colors.white,
             }}>
-            Welcome, John
+            Welkom John
           </Text>
           <Text style={{fontSize: wp(3), color: theme.colors.white}}>
             Check out here what you missed

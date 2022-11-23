@@ -1,8 +1,8 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
-import {helthData, PortalsData} from '../Utils/MockData';
+import {CustomCard} from '../Components';
+import {helthData} from '../Utils/MockData';
 
 const HealthInsuranceScreen = ({navigation}) => {
   const renderItem = ({item, index}) => {

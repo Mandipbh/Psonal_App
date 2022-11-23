@@ -1,7 +1,6 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
-import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
+import {CustomCard, Header} from '../Components';
 import {PortalsData} from '../Utils/MockData';
 
 const PortalsScreen = ({navigation}) => {

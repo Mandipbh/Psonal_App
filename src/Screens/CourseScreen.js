@@ -1,14 +1,8 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
-import {
-  CourseData,
-  MessageData,
-  NewsData,
-  PortalsData,
-} from '../Utils/MockData';
-import MessageCard from '../Components/MessageCard';
+import {CourseData} from '../Utils/MockData';
+import {MessageCard} from '../Components';
 
 const CourseScreen = ({navigation}) => {
   const renderItem = ({item, index}) => {

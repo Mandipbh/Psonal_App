@@ -6,22 +6,17 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Alert,
-  ScrollView,
-  Platform,
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {theme} from '../Utils';
-import Header from '../Components/Header';
-import InputBox from '../Components/InputBox';
+import {Header} from '../Components';
+import {InputBox} from '../Components';
 
 const h = Dimensions.get('window').height;
 const w = Dimensions.get('window').width;
@@ -42,7 +37,7 @@ const LoginForm = ({navigation}) => {
       </View>
       <View>
         <InputBox
-          label="Password"
+          label="Wachtwoord"
           placeholder="*********"
           secureTextEntry={true}
         />

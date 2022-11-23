@@ -1,9 +1,7 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
-
-import MessageCard from '../Components/MessageCard';
+import {MessageCard} from '../Components'
 import {useNavigation} from '@react-navigation/native';
 
 const CommanScreen = props => {

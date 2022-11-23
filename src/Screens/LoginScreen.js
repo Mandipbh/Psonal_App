@@ -1,12 +1,10 @@
 import {
-  Button,
   Dimensions,
   Image,
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
-  Alert,
 } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';

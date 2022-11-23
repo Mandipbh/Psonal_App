@@ -17,7 +17,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {theme} from '../Utils';
-import Header from '../Components/Header';
+import {Header} from '../Components';
 import InputBox, {SecondTextInput} from '../Components/InputBox';
 import {CommenInput} from './Registration';
 
@@ -73,15 +73,10 @@ const SecondRegForm = ({navigation}) => {
       />
 
       <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-        <SecondTextInput label="Preferences">
-          {/* <FlatList
-          data={Prefrences}
-          renderItem={renderItem}
-          style={{marginTop: hp(1)}}
-        /> */}
-          <CommenInput placeholder="Health insurance" />
-          <CommenInput placeholder="School" secureTextEntry={true} />
-          <CommenInput placeholder="Ocupation" secureTextEntry={true} />
+        <SecondTextInput label="Voorkeuren">
+          <CommenInput placeholder="Zorgverzekeraar" />
+          <CommenInput placeholder="School" />
+          <CommenInput placeholder="Beroep" />
         </SecondTextInput>
 
         <TouchableOpacity
@@ -109,7 +104,7 @@ const SecondRegForm = ({navigation}) => {
                   color: theme.colors.white,
                   textAlign: 'center',
                 }}>
-                {'Register '}
+                {'Registreren '}
               </Text>
               <Icon
                 name="arrowright"
@@ -120,16 +115,6 @@ const SecondRegForm = ({navigation}) => {
             </View>
           </LinearGradient>
         </TouchableOpacity>
-        {/* <View style={styles.bttomView}>
-          <Image
-            style={styles.bottomImgone}
-            source={require('../assets/Bottom2.png')}
-          />
-          <Image
-            style={styles.bottomImgtwo}
-            source={require('../assets/Bottom1.png')}
-          />
-        </View> */}
         <Image
           source={require('../assets/CompLayer1.png')}
           style={{marginTop: wp(-25)}}

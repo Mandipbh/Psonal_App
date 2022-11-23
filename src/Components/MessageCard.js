@@ -1,7 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/Fontisto';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

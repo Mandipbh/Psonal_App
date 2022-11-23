@@ -1,6 +1,6 @@
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import Header from '../Components/Header';
+import {Header} from '../Components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {theme} from '../Utils';
 

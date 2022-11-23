@@ -17,7 +17,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {theme} from '../Utils';
-import Header from '../Components/Header';
+import {Header} from '../Components';
 
 const SignupScreen = ({navigation}) => {
   return (
@@ -46,7 +46,7 @@ const SignupScreen = ({navigation}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Text style={styles.btnTxt}>{'Login in with your Digit '}</Text>
+              <Text style={styles.btnTxt}>{'Log in met uw DigiD '}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
@@ -56,7 +56,7 @@ const SignupScreen = ({navigation}) => {
             </View>
           </LinearGradient>
         </TouchableOpacity>
-        <Text style={styles.or}>Or</Text>
+        <Text style={styles.or}>Of</Text>
         <TouchableOpacity
           onPress={() => navigation.navigate('LoginForm')}
           style={styles.linearGradientView1}>
@@ -71,7 +71,9 @@ const SignupScreen = ({navigation}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Text style={styles.btnTxt}>{'Login in with your Psonal '}</Text>
+              <Text style={styles.btnTxt}>
+                {'Log in met uw Psonal account'}
+              </Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
@@ -97,7 +99,7 @@ const SignupScreen = ({navigation}) => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Text style={styles.btnTxt}>{'Register'}</Text>
+              <Text style={styles.btnTxt}>{'Registreren'}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
@@ -107,7 +109,9 @@ const SignupScreen = ({navigation}) => {
             </View>
           </LinearGradient>
         </TouchableOpacity>
-        <Text style={styles.new}>{'No Psonal account yet? Register here'}</Text>
+        <Text style={styles.new}>
+          {'Nog geen Psonal account? registreer je hier!'}
+        </Text>
         <Image
           style={styles.bottomImgone}
           source={require('../assets/Bottom2.png')}

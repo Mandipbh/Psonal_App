@@ -1,8 +1,7 @@
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from '../Components/Header';
-import CustomCard from '../Components/CustomCard';
-import {MessageData, NewsData, PortalsData} from '../Utils/MockData';
+import {Header} from '../Components';
+import {MessageData} from '../Utils/MockData';
 import MessageCard from '../Components/MessageCard';
 
 const MessagesScreen = ({navigation}) => {

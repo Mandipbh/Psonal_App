@@ -3,26 +3,26 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import LoginScreen from '../Screens/LoginScreen';
-import SignupScreen from '../Screens/SignupScreen';
-import HomeScreen from '../Screens/HomeScreen';
-import PortalsScreen from '../Screens/PortalsScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text, View} from 'react-native';
-import SettingScreen from '../Screens/SettingScreen';
 import {theme} from '../Utils';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import NewsScreen from '../Screens/NewsScreen';
-import MessagesScreen from '../Screens/MessagesScreen';
-import CourseScreen from '../Screens/CourseScreen';
-import CommanScreen from '../Screens/CommanScreen';
-import HealthInsuranceScreen from '../Screens/HealthInsuranceScreen';
-import LoginForm from '../Screens/LoginForm';
-import Registration from '../Screens/Registration';
-import SecondRegForm from '../Screens/SecondRegForm';
+import {
+  Home,
+  Comman,
+  Portals,
+  News,
+  HealthInsurance,
+  Login,
+  Loginform,
+  Signup,
+  Registration,
+  Setting,
+  SecondRegForm,
+} from '../Screens';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -41,11 +41,11 @@ const HomeStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Comman" component={CommanScreen} />
-      <Stack.Screen name="Portals" component={PortalsScreen} />
-      <Stack.Screen name="News" component={NewsScreen} />
-      <Stack.Screen name="Helth" component={HealthInsuranceScreen} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Comman" component={Comman} />
+      <Stack.Screen name="Portals" component={Portals} />
+      <Stack.Screen name="News" component={News} />
+      <Stack.Screen name="Helth" component={HealthInsurance} />
     </Stack.Navigator>
   );
 };
@@ -94,7 +94,7 @@ const BottomTab = () => {
 
       <Tab.Screen
         name="Settings"
-        component={SettingScreen}
+        component={Setting}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -119,15 +119,11 @@ function AppNavigator() {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup} />
 
         <Stack.Screen name="Tabs" component={BottomTab} />
-        <Stack.Screen name="LoginForm" component={LoginForm} />
-        {/* <Stack.Screen name="Portals" component={PortalsScreen} /> */}
-        {/* <Stack.Screen name="News" component={NewsScreen} /> */}
-        {/* <Stack.Screen name="Messgaes" component={MessagesScreen} />
-        <Stack.Screen name="Course" component={CourseScreen} /> */}
+        <Stack.Screen name="LoginForm" component={Loginform} />
         <Stack.Screen name="Registration" component={Registration} />
         <Stack.Screen name="SecondRegForm" component={SecondRegForm} />
       </Stack.Navigator>

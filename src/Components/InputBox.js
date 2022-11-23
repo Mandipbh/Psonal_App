@@ -1,6 +1,5 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
-import React, {Children} from 'react';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {
   widthPercentageToDP as wp,
@@ -10,7 +9,7 @@ import {theme} from '../Utils';
 
 const InputBox = props => {
   const {label, placeholder, secureTextEntry, children} = props;
-
+ 
   return (
     <View style={styles.inputView}>
       <LinearGradient
@@ -31,8 +30,7 @@ const InputBox = props => {
     </View>
   );
 };
-
-export const SecondTextInput = props => {
+  const SecondTextInput = props => {
   const {label, children} = props;
   return (
     <View style={[styles.inputView]}>
@@ -59,7 +57,7 @@ export const SecondTextInput = props => {
   );
 };
 
-export default InputBox;
+export {InputBox, SecondTextInput};
 
 const styles = StyleSheet.create({
   inputView: {
@@ -71,8 +69,6 @@ const styles = StyleSheet.create({
     padding: wp(4.5),
     borderRadius: 10,
     width: '100%',
-    // borderTopLeftRadius: 40,
-    // borderBottomLeftRadius: 40,
     justifyContent: 'center',
   },
   textlist: {

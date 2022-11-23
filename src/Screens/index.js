@@ -1,0 +1,13 @@
+export {default as Comman} from './CommanScreen';
+export {default as Course} from './CourseScreen';
+export {default as HealthInsurance} from './HealthInsuranceScreen';
+export {default as Home} from './HomeScreen';
+export {default as Loginform} from './LoginForm';
+export {default as Login} from './LoginScreen';
+export {default as Messages} from './MessagesScreen';
+export {default as News} from './NewsScreen';
+export {default as Portals} from './PortalsScreen';
+export {default as Registration} from './Registration';
+export {default as SecondRegForm} from './SecondRegForm';
+export {default as Setting} from './SettingScreen';
+export {default as Signup} from './SignupScreen';
