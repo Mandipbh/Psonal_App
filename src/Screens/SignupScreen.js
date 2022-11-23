@@ -40,13 +40,18 @@ const SignupScreen = ({navigation}) => {
             start={{x: 0, y: 1}}
             end={{x: 1, y: 0}}
             colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View style={{flexDirection: 'row'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Text style={styles.btnTxt}>{'Login in with your Digit '}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
                 size={wp(5)}
-                style={{top: 4}}
+                // style={{top: 4}}
               />
             </View>
           </LinearGradient>
@@ -60,13 +65,18 @@ const SignupScreen = ({navigation}) => {
             start={{x: 0, y: 1}}
             end={{x: 1, y: 0}}
             colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View style={{flexDirection: 'row'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Text style={styles.btnTxt}>{'Login in with your Psonal '}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
                 size={wp(5)}
-                style={{top: 4}}
+                // style={{top: 4}}
               />
             </View>
           </LinearGradient>
@@ -81,13 +91,18 @@ const SignupScreen = ({navigation}) => {
             start={{x: 0, y: 1}}
             end={{x: 1, y: 0}}
             colors={[theme.colors.blue, theme.colors.lightRed]}>
-            <View style={{flexDirection: 'row'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Text style={styles.btnTxt}>{'Register'}</Text>
               <Icon
                 name="arrowright"
                 color={theme.colors.white}
                 size={wp(5)}
-                style={{top: 4}}
+                style={{left: 3, top: 2}}
               />
             </View>
           </LinearGradient>
@@ -186,7 +201,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignSelf: 'center',
     zIndex: 111,
-    bottom: hp(7.5),
+    bottom: hp(11),
   },
   new: {
     position: 'absolute',

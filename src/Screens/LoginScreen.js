@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     width: w * 1.1,
   },
   linearGradientView: {
-    top: h * 0.73,
+    top: h * 0.85,
     width: w * 0.7,
     position: 'absolute',
     alignSelf: 'center',
