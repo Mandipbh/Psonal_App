@@ -61,7 +61,7 @@ const SettingScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: theme.colors.white}}>
       <Header
-        headerName="Settings"
+        headerName="Instellingen"
         onLeftIconPress={() => {
           navigation.goBack('Tabs');
         }}

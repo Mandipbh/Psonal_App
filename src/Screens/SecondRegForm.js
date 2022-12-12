@@ -65,7 +65,7 @@ const SecondRegForm = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Header
-        headerName={'Registration'}
+        headerName={'Registratie'}
         onLeftIconPress={() => {
           navigation.goBack();
         }}

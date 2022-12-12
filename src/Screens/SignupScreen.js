@@ -30,8 +30,7 @@ const SignupScreen = ({navigation}) => {
         }}
       />
       <Text style={styles.txt}>
-        Log in securely here with your Digit so that you have access to all your
-        portals and business
+        Log veilig in met uw DigiD en krijg toegang tot al uw portalen en zaken
       </Text>
       <View style={{marginTop: hp(10)}}>
         <TouchableOpacity onPress={() => {}} style={styles.linearGradientView}>
